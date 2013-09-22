@@ -37,7 +37,7 @@ sub intercept(&) {
 
     my $sql = SQL::Abstract->new;
 
-    for my $table (keys $insert_sth) {
+    for my $table (keys %{$insert_sth}) {
         my ($stmt, @bind) = $sql->insert_multi($table, $insert_sth->{$table}->{columns}, $insert_sth->{$table}->{values});
         my $sth = $insert_sth->{$table}->{dbh}->prepare($stmt);
         $sth->execute(@bind);
