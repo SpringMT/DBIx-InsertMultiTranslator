@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "DBI" : "0",
             "SQL::Abstract" : "0",
             "SQL::Abstract::Plugin::InsertMulti" : "0",
             "SQL::Statement" : "0",
@@ -55,5 +56,15 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/SpringMT/DBIx-InsertMultiTranslator/issues"
+      },
+      "homepage" : "https://github.com/SpringMT/DBIx-InsertMultiTranslator",
+      "repository" : {
+         "url" : "https://github.com/SpringMT/DBIx-InsertMultiTranslator.git",
+         "web" : "https://github.com/SpringMT/DBIx-InsertMultiTranslator"
+      }
+   },
    "version" : "0.01"
 }

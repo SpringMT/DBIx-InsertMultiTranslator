@@ -24,4 +24,14 @@ intercept {
   $sth->execute(7);
 };
 
+intercept {
+  $sth->execute(8);
+  $sth->execute(9);
+  $sth->execute(10);
+};
+
+my $sth_s = $dbh->prepare(qq{SELECT * FROM test});
+$sth_s->execute;
+print Dumper $sth_s->fetchall_arrayref;
+
 

@@ -17,8 +17,6 @@ our(@EXPORT_OK);
 @EXPORT_OK = qw/intercept/;
 use constant _ORG_EXECUTE => \&DBI::st::execute;
 
-my $insert_sth = +{};
-
 #sub new {
 #    my $class = shift;
 #    my %args  = shift;
@@ -28,7 +26,9 @@ my $insert_sth = +{};
 
 sub intercept(&) {
     my ($orig) = @_;
-    my $st_execute ||= _st_execute(_ORG_EXECUTE);
+
+    my $insert_sth = +{};
+    my $st_execute ||= _st_execute(_ORG_EXECUTE, $insert_sth);
 
     no warnings qw(redefine prototype);
     *DBI::st::execute = $st_execute;
@@ -45,7 +45,7 @@ sub intercept(&) {
 }
 
 sub _st_execute {
-    my ($org) = @_;
+    my ($org, $insert_sth) = @_;
 
     return sub {
         my $sth = shift;
