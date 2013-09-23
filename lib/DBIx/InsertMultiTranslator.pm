@@ -92,9 +92,7 @@ __END__
 
 =head1 NAME
 
-[![Build Status](https://travis-ci.org/SpringMT/DBIx-InsertMultiTranslator.png?branch=master)](https://travis-ci.org/SpringMT/DBIx-InsertMu
-ltiTranslator) [![Coverage Status](https://coveralls.io/repos/SpringMT/DBIx-InsertMultiTranslator/badge.png?branch=master)](https://coverall
-s.io/r/SpringMT/DBIx-InsertMultiTranslator?branch=master)
+[![Build Status](https://travis-ci.org/SpringMT/DBIx-InsertMultiTranslator.png?branch=master)](https://travis-ci.org/SpringMT/DBIx-InsertMultiTranslator) [![Coverage Status](https://coveralls.io/repos/SpringMT/DBIx-InsertMultiTranslator/badge.png?branch=master)](https://coveralls.io/r/SpringMT/DBIx-InsertMultiTranslator?branch=master)
 
 DBIx::InsertMultiTranslator - It's new $module
 
